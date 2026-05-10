@@ -201,6 +201,78 @@ footer { background: var(--dark); padding: 40px 32px; display: flex; align-items
 /* REVEAL */
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.55s ease, transform 0.55s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ── MOBILE ── */
+@media (max-width: 640px) {
+  /* Nav */
+  nav { padding: 0 18px; }
+  .nav-cta { font-size: 13px !important; padding: 8px 16px !important; }
+
+  /* Hero */
+  .hero { padding: 88px 20px 56px; min-height: auto; }
+  .hero h1 { font-size: 38px; letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 16px; }
+  .hero h1 em::after { bottom: 3px; height: 4px; }
+  .hero-sub { font-size: 15px; margin-bottom: 32px; }
+  .hero-badge { font-size: 11px; padding: 5px 13px; margin-bottom: 24px; }
+  .role-tabs { width: 100%; }
+  .role-tab { flex: 1; font-size: 12px; padding: 7px 10px; }
+  .pill-input { box-shadow: 2px 2px 0 var(--dark); }
+  .pill-input input { font-size: 14px; padding: 13px 16px; }
+  .pill-input button { font-size: 12px; padding: 0 14px; height: 48px; }
+
+  /* Sections */
+  .section { padding: 56px 20px; }
+  .section-title { letter-spacing: -1px; margin-bottom: 10px; }
+  .section-sub { font-size: 15px; margin-bottom: 36px; }
+
+  /* Verticals */
+  .vertical-card { padding: 22px 18px; }
+
+  /* Steps */
+  .step-card { padding: 26px 20px; }
+  .step-num { font-size: 40px; margin-bottom: 12px; }
+
+  /* Audience */
+  .audience-card { padding: 28px 22px; border-radius: var(--radius-lg); }
+  .audience-card h3 { font-size: 22px; }
+  .audience-card > p { font-size: 13px; margin-bottom: 20px; }
+
+  /* Compliance */
+  .compliance-band { padding: 48px 20px; }
+
+  /* Stats */
+  .stats-section { padding: 56px 20px; }
+  .stat-number { font-size: 38px; }
+
+  /* Pricing */
+  .pricing-card { padding: 28px 20px; border-right: none; border-bottom: 1px solid var(--border); }
+  .pricing-card.featured { border-bottom-color: rgba(255,255,255,0.08); }
+  .price-amount { font-size: 36px; }
+  .price-desc { min-height: auto; }
+
+  /* Legal */
+  .legal-notice { padding: 20px; gap: 12px; }
+  .legal-icon { width: 30px; height: 30px; }
+
+  /* Final CTA */
+  .final-cta { padding: 56px 20px; }
+  .final-cta h2 { letter-spacing: -1.5px; }
+  .final-cta p { font-size: 15px; margin-bottom: 28px; }
+  .cta-pill { flex-direction: column; border-radius: 18px; max-width: 100%; }
+  .cta-pill input { padding: 15px 20px; border-radius: 18px 18px 0 0; font-size: 15px; }
+  .cta-pill button { border-radius: 0 0 18px 18px; height: 52px; width: 100%; font-size: 14px; }
+
+  /* Footer */
+  footer { padding: 32px 20px; flex-direction: column; align-items: flex-start; gap: 18px; }
+  .footer-links { gap: 14px; }
+}
+
+/* Small phones */
+@media (max-width: 380px) {
+  .hero h1 { font-size: 32px; }
+  .pill-input button { padding: 0 10px; font-size: 11px; }
+  .role-tab { padding: 6px 6px; font-size: 11px; }
+}
 </style>
 </head>
 <body>
@@ -219,8 +291,8 @@ footer { background: var(--dark); padding: 40px 32px; display: flex; align-items
     <a href="#services">Services</a>
     <a href="#how">How it works</a>
     <a href="#pricing">Pricing</a>
-    <a href="https://localloop-app.vercel.app/signup" class="nav-cta">Get started free</a>
   </div>
+  <a href="https://localloop-app.vercel.app/signup" class="nav-cta">Get started free</a>
 </nav>
 
 <section class="hero" id="top">
