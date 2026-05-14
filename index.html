@@ -198,6 +198,37 @@ footer { background: var(--dark); padding: 40px 32px; display: flex; align-items
 .footer-links a:hover { color: var(--teal-mid); }
 .footer-right { font-size: 12px; color: rgba(255,255,255,0.25); }
 
+/* APP INSTALL */
+.install-wrap { width: 100%; max-width: 520px; animation: riseUp 0.6s 0.26s ease both; }
+.install-os-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 18px; }
+.install-os-card { background: var(--surface); border: 1.5px solid var(--border); border-radius: 18px; padding: 20px 18px; text-align: left; transition: border-color 0.2s, box-shadow 0.2s; }
+.install-os-card:hover { border-color: var(--teal-light); box-shadow: 0 6px 24px rgba(29,158,117,0.1); }
+.install-os-icon { font-size: 22px; margin-bottom: 8px; }
+.install-os-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 13px; color: var(--dark); margin-bottom: 8px; }
+.install-os-steps { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+.install-os-steps li { font-size: 12px; color: var(--soft); display: flex; align-items: flex-start; gap: 6px; line-height: 1.4; }
+.install-os-steps li::before { content: ''; display: inline-block; width: 16px; height: 16px; border-radius: 50%; background: var(--teal-pale); flex-shrink: 0; margin-top: 1px; font-size: 9px; line-height: 16px; text-align: center; }
+.install-step-1::before { content: '1'; }
+.install-step-2::before { content: '2'; }
+.install-step-3::before { content: '3'; }
+.install-open-btn { display: block; width: 100%; padding: 15px; background: var(--dark); color: #fff; border-radius: 100px; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 15px; text-align: center; transition: background 0.2s; margin-bottom: 12px; }
+.install-open-btn:hover { background: var(--teal); }
+.install-hint { font-size: 12px; color: var(--muted); text-align: center; }
+@media (max-width: 480px) { .install-os-grid { grid-template-columns: 1fr; } }
+
+/* FINAL CTA INSTALL */
+.final-install-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 480px; margin: 0 auto 20px; }
+.final-install-card { background: rgba(255,255,255,0.1); border: 1.5px solid rgba(255,255,255,0.2); border-radius: 18px; padding: 20px 18px; text-align: left; }
+.final-install-icon { font-size: 22px; margin-bottom: 8px; }
+.final-install-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 13px; color: #fff; margin-bottom: 8px; }
+.final-install-steps { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+.final-install-steps li { font-size: 12px; color: rgba(255,255,255,0.6); display: flex; align-items: flex-start; gap: 6px; line-height: 1.4; }
+.final-install-steps li::before { content: ''; display: inline-block; width: 16px; height: 16px; border-radius: 50%; background: rgba(255,255,255,0.12); flex-shrink: 0; margin-top: 1px; font-size: 9px; line-height: 16px; text-align: center; color: rgba(255,255,255,0.8); }
+.final-install-steps .install-step-1::before { content: '1'; }
+.final-install-steps .install-step-2::before { content: '2'; }
+.final-install-steps .install-step-3::before { content: '3'; }
+@media (max-width: 480px) { .final-install-grid { grid-template-columns: 1fr; } }
+
 /* REVEAL */
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.55s ease, transform 0.55s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -292,24 +323,36 @@ footer { background: var(--dark); padding: 40px 32px; display: flex; align-items
     <a href="#how">How it works</a>
     <a href="#pricing">Pricing</a>
   </div>
-  <a href="https://localloop-app.vercel.app/signup" class="nav-cta">Get started free</a>
+  <a href="https://localloop-app.vercel.app" class="nav-cta">Get the app</a>
 </nav>
 
 <section class="hero" id="top">
-  <div class="hero-badge"><span class="badge-dot"></span>Now accepting early signups &mdash; Malta</div>
+  <div class="hero-badge"><span class="badge-dot"></span>Now live in Malta</div>
   <h1>Malta's trusted<br>local services,<br><em>one platform</em></h1>
   <p class="hero-sub">Find verified local professionals or grow your service business &mdash; without relying on Facebook groups or outdated directories.</p>
-  <div class="hero-form-wrap" id="signup">
-    <div class="role-tabs">
-      <button class="role-tab active" onclick="setRole('customer',this)">I need a service</button>
-      <button class="role-tab" onclick="setRole('provider',this)">I offer services</button>
+  <div class="install-wrap">
+    <a href="https://localloop-app.vercel.app" class="install-open-btn">Open LocalLoop →</a>
+    <div class="install-os-grid">
+      <div class="install-os-card">
+        <div class="install-os-icon">🍎</div>
+        <div class="install-os-name">iPhone</div>
+        <ul class="install-os-steps">
+          <li class="install-step-1">Open the link in <strong>Safari</strong></li>
+          <li class="install-step-2">Tap the <strong>Share</strong> button</li>
+          <li class="install-step-3">Tap <strong>Add to Home Screen</strong></li>
+        </ul>
+      </div>
+      <div class="install-os-card">
+        <div class="install-os-icon">🤖</div>
+        <div class="install-os-name">Android</div>
+        <ul class="install-os-steps">
+          <li class="install-step-1">Open the link in <strong>Chrome</strong></li>
+          <li class="install-step-2">Tap the <strong>menu (⋮)</strong></li>
+          <li class="install-step-3">Tap <strong>Add to Home Screen</strong></li>
+        </ul>
+      </div>
     </div>
-    <div class="pill-input">
-      <input type="email" id="hero-email" placeholder="Enter your email address" autocomplete="email">
-      <button onclick="handleSignup('hero')">Join the waitlist</button>
-    </div>
-    <div class="success-msg" id="hero-success">You are on the list. We will be in touch when LocalLoop launches.</div>
-    <p class="form-hint">Free to join &nbsp;&middot;&nbsp; No spam &nbsp;&middot;&nbsp; Malta only</p>
+    <p class="install-hint">Installs like a native app &nbsp;&middot;&nbsp; No App Store needed &nbsp;&middot;&nbsp; Free forever</p>
   </div>
 </section>
 
@@ -610,7 +653,7 @@ footer { background: var(--dark); padding: 40px 32px; display: flex; align-items
           <li>Track all your bookings</li>
           <li>No hidden fees, ever</li>
         </ul>
-        <a href="https://localloop-app.vercel.app/browse" class="pricing-btn">Browse providers</a>
+        <a href="https://localloop-app.vercel.app" class="pricing-btn">Get the app</a>
       </div>
 
     </div>
@@ -630,13 +673,30 @@ footer { background: var(--dark); padding: 40px 32px; display: flex; align-items
 
 <div class="final-cta">
   <div class="final-cta-inner">
-    <h2>Be first when we launch</h2>
-    <p>Early providers receive 3 months free on any paid plan. Early customers get priority access to the best professionals in Malta.</p>
-    <div class="cta-pill">
-      <input type="email" id="cta-email" placeholder="Your email address" autocomplete="email">
-      <button onclick="handleSignup('cta')">Join now</button>
+    <h2>Find a professional today</h2>
+    <p>Browse verified local providers across Malta. Install the app to your home screen in seconds.</p>
+    <div class="final-install-grid">
+      <div class="final-install-card">
+        <div class="final-install-icon">🍎</div>
+        <div class="final-install-name">iPhone</div>
+        <ul class="final-install-steps">
+          <li class="install-step-1">Open in <strong>Safari</strong></li>
+          <li class="install-step-2">Tap <strong>Share</strong></li>
+          <li class="install-step-3">Tap <strong>Add to Home Screen</strong></li>
+        </ul>
+      </div>
+      <div class="final-install-card">
+        <div class="final-install-icon">🤖</div>
+        <div class="final-install-name">Android</div>
+        <ul class="final-install-steps">
+          <li class="install-step-1">Open in <strong>Chrome</strong></li>
+          <li class="install-step-2">Tap <strong>menu (⋮)</strong></li>
+          <li class="install-step-3">Tap <strong>Add to Home Screen</strong></li>
+        </ul>
+      </div>
     </div>
-    <div class="cta-success" id="cta-success">You are on the list. We will reach out before launch.</div>
+    <a href="https://localloop-app.vercel.app" class="install-open-btn" style="max-width:340px;margin:0 auto 12px;display:block;">Open LocalLoop →</a>
+    <p style="font-size:13px;color:rgba(255,255,255,0.45);">Free for customers &nbsp;&middot;&nbsp; No App Store needed</p>
   </div>
 </div>
 
@@ -652,30 +712,6 @@ footer { background: var(--dark); padding: 40px 32px; display: flex; align-items
 </footer>
 
 <script>
-let selectedRole = 'customer';
-function setRole(role, btn) {
-  selectedRole = role;
-  document.querySelectorAll('.role-tab').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  document.getElementById('hero-email').placeholder = role === 'provider'
-    ? 'Your email — list your services on LocalLoop'
-    : 'Enter your email address';
-}
-function handleSignup(id) {
-  const emailEl = document.getElementById(id + '-email');
-  const val = emailEl.value.trim();
-  if (!val || !val.includes('@') || !val.includes('.')) {
-    emailEl.style.outline = '2px solid #E24B4A';
-    setTimeout(() => emailEl.style.outline = '', 1500);
-    return;
-  }
-  window.location.href = 'https://localloop-app.vercel.app/signup';
-}
-document.querySelectorAll('input[type="email"]').forEach(el => {
-  el.addEventListener('keydown', e => {
-    if (e.key === 'Enter') handleSignup(el.id === 'hero-email' ? 'hero' : 'cta');
-  });
-});
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
 }, { threshold: 0.08 });
