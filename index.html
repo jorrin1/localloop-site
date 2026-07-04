@@ -8,8 +8,8 @@
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
-  --teal: #0F6E56; --teal-light: #1D9E75; --teal-mid: #5DCAA5; --teal-pale: #E1F5EE;
-  --amber: #EF9F27; --amber-dark: #BA7517; --amber-pale: rgba(239,159,39,0.1);
+  --teal: #0F6E56; --teal-light: #178266; --teal-mid: #4FA98C; --teal-pale: #E8F2EE;
+  --amber: #E8920F; --amber-dark: #C87B08; --amber-pale: rgba(232,146,15,0.1); --honey-text: #231500;
   --dark: #111; --dark2: #1a1a1a; --mid: #444; --soft: #777; --muted: #aaa;
   --border: #e4e4dc; --bg: #f8f8f4; --surface: #fff;
   --radius: 12px; --radius-lg: 20px; --radius-xl: 28px;
@@ -150,7 +150,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 62px; ba
 .pricing-card:hover:not(.featured) { background: var(--bg); }
 .ptag { display: inline-block; font-size: 10px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 3px 10px; border-radius: 100px; margin-bottom: 20px; width: fit-content; }
 .pricing-card:not(.featured) .ptag { background: var(--bg); color: var(--soft); border: 1px solid var(--border); }
-.pricing-card.featured .ptag { background: var(--teal-light); color: #fff; }
+.pricing-card.featured .ptag { background: var(--amber); color: var(--honey-text); }
 .tier-name { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; color: var(--soft); }
 .pricing-card.featured .tier-name { color: rgba(255,255,255,0.45); }
 .price-amount { font-family: 'Syne', sans-serif; font-size: 44px; font-weight: 800; letter-spacing: -2px; line-height: 1; color: var(--dark); }
@@ -163,14 +163,14 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 62px; ba
 .feat-list li { display: flex; align-items: flex-start; gap: 9px; font-size: 13px; color: var(--mid); line-height: 1.45; }
 .pricing-card.featured .feat-list li { color: rgba(255,255,255,0.6); }
 .feat-list li::before { content: ''; width: 15px; height: 15px; border-radius: 50%; background: var(--teal-pale); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6l3 3 5-5' stroke='%230F6E56' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E"); background-size: 11px; background-repeat: no-repeat; background-position: center; flex-shrink: 0; margin-top: 1px; }
-.pricing-card.featured .feat-list li::before { background-color: rgba(93,202,165,0.15); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6l3 3 5-5' stroke='%235DCAA5' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E"); }
+.pricing-card.featured .feat-list li::before { background-color: rgba(79,169,140,0.15); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6l3 3 5-5' stroke='%234FA98C' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E"); }
 .feat-list li.dim { color: var(--muted); }
 .feat-list li.dim::before { background-color: transparent; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M3 6h6' stroke='%23aaa' stroke-width='1.6' stroke-linecap='round' fill='none'/%3E%3C/svg%3E"); }
 .pricing-card.featured .feat-list li.dim { color: rgba(255,255,255,0.2); }
 .pricing-btn { display: block; width: 100%; padding: 12px 16px; text-align: center; border-radius: 100px; font-family: 'Syne', sans-serif; font-weight: 600; font-size: 13px; cursor: pointer; border: 1.5px solid var(--border); background: transparent; color: var(--dark); transition: all 0.2s; margin-top: auto; }
 .pricing-btn:hover:not(.primary) { border-color: var(--dark); background: var(--bg); }
-.pricing-btn.primary { background: var(--teal-light); border-color: var(--teal-light); color: #fff; }
-.pricing-btn.primary:hover { background: var(--teal); border-color: var(--teal); }
+.pricing-btn.primary { background: var(--amber); border-color: var(--amber); color: var(--honey-text); }
+.pricing-btn.primary:hover { background: var(--amber-dark); border-color: var(--amber-dark); }
 .pricing-note { font-size: 13px; color: var(--muted); text-align: center; margin-top: 24px; }
 .legal-notice { background: rgba(29,158,117,0.04); border: 1px solid rgba(29,158,117,0.15); border-radius: var(--radius-lg); padding: 28px 32px; margin-top: 56px; display: grid; grid-template-columns: auto 1fr; gap: 20px; align-items: start; }
 .legal-icon { width: 36px; height: 36px; background: var(--teal-pale); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
@@ -186,7 +186,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 62px; ba
 .cta-pill { display: flex; width: 100%; max-width: 460px; margin: 0 auto; background: rgba(255,255,255,0.15); border: 1.5px solid rgba(255,255,255,0.3); border-radius: 100px; overflow: hidden; }
 .cta-pill input { flex: 1; border: none; outline: none; background: transparent; padding: 14px 22px; font-family: 'DM Sans', sans-serif; font-size: 15px; color: #fff; min-width: 0; }
 .cta-pill input::placeholder { color: rgba(255,255,255,0.45); }
-.cta-pill button { border: none; background: #fff; color: var(--teal); padding: 0 24px; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 13px; cursor: pointer; border-radius: 0 100px 100px 0; transition: background 0.2s; height: 50px; white-space: nowrap; }
+.cta-pill button { border: none; background: var(--amber); color: var(--honey-text); padding: 0 24px; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 13px; cursor: pointer; border-radius: 0 100px 100px 0; transition: background 0.2s; height: 50px; white-space: nowrap; }
 .cta-pill button:hover { background: var(--teal-pale); }
 .cta-success { display: none; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); border-radius: var(--radius); padding: 12px 20px; color: #fff; font-size: 14px; font-weight: 500; max-width: 460px; margin: 12px auto 0; text-align: center; }
 
@@ -312,8 +312,8 @@ footer { background: var(--dark); padding: 40px 32px; display: flex; align-items
   <div class="nav-logo">
     <div class="logo-mark">
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-        <circle cx="8" cy="8" r="3" stroke="#5DCAA5" stroke-width="1.5"/>
-        <circle cx="8" cy="8" r="6.5" stroke="rgba(93,202,165,0.35)" stroke-width="1"/>
+        <circle cx="8" cy="8" r="3" stroke="#4FA98C" stroke-width="1.5"/>
+        <circle cx="8" cy="8" r="6.5" stroke="rgba(79,169,140,0.35)" stroke-width="1"/>
       </svg>
     </div>
     LocalLoop
